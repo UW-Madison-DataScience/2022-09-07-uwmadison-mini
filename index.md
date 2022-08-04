@@ -93,8 +93,8 @@ the pitch.
 {% endcomment %}
 {% if site.carpentry == "swc" %}
 {% include swc/intro.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/intro.html %}
+{% elsif site.carpentry == "none" %}
+{% include none/intro.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/intro.html %}
 {% endif %}
@@ -111,8 +111,8 @@ workshop is only open to people from a particular institution.
 {% endcomment %}
 {% if site.carpentry == "swc" %}
 {% include swc/who.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/who.html %}
+{% elsif site.carpentry == "none" %}
+{% include none/who.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/who.html %}
 {% endif %}
@@ -360,16 +360,9 @@ of code below the Schedule `<h2>` header below with
 
 <h2 id="schedule">Schedule</h2>
 
-{% if site.carpentry == "swc" %}
-{% include swc/schedule.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/schedule.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/schedule.html %}
-{% elsif site.carpentry == "incubator" %}
-This workshop is teaching a lesson in [The Carpentries Incubator](https://carpentries-incubator.org/).
-Please check [the lesson homepage]({{ site.incubator_lesson_site }}) for a list of lesson sections and estimated timings.
-{% endif %}
+{% include none/schedule.html %}
+
+The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. If you would like to know the timing of these breaks in advance, please [contact the workshop organisers](#contact). For a list of lesson sections and estimated timings, [visit the lesson homepage]({{ site.lesson_site }}).
 
 {% comment %}
 Edit/replace the text above if you want to include a schedule table.
@@ -436,13 +429,13 @@ These are the installation instructions for the tools used
 during the workshop.
 {% endcomment %}
 
-{% if site.carpentry == "swc" %}
-{% include swc/setup.html %}
+{% if site.carpentry == "none" %}
+{% include none/setup.html %}
 {% elsif site.carpentry == "dc" %}
 {% include dc/setup.html %}
 {% elsif site.carpentry == "lc" %}
 {% include lc/setup.html %}
-{% elsif site.carpentry == "incubator" %}
+{% elsif site.carpentry == "pilot" %}
 Please check the "Setup" page of
 [the lesson site]({{ site.incubator_lesson_site }}) for instructions to follow
 to obtain the software and data you will need to follow the lesson.
